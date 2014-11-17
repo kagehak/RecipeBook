@@ -1,0 +1,64 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../../bower_components/polymer-grid-layout/polymer-grid-layout.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-progress/paper-progress.html">
+<link rel="import" href="../../bower_components/paper-toast/paper-toast.html">
+<link rel="import" href="../../bower_components/core-icons/core-icons.html">
+<link rel="import" href="../../bower_components/core-icons/av-icons.html">
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../../bower_components/paper-radio-group/paper-radio-group.html">
+<link rel="import" href="../../bower_components/paper-radio-button/paper-radio-button.html">
+<link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html">
+<polymer-element name="createbook-view">
+
+  <template>
+
+
+    <style>
+
+      :host{
+        overflow: visible !important;
+        width: 100vw;
+        height: 100vh;
+        float: center;
+      }
+
+      paper-shadow{
+        width: 80vw;
+        height: 80vh;
+        position: center;
+        margin: 10vw;;
+        background: rgba(250,250,250,0.9);
+
+      }
+
+      div{
+        width: 100%;
+        height: 100%;
+        margin: 15px;
+      }
+
+      paper-input {
+        width: 80%;
+        margin: 15px;
+      }
+
+      paper_fab {
+
+
+      }
+
+    </style>
+      <paper-shadow z="3" fit>
+        <div>
+         <paper-input id="stuff" label="Book Title"  Value="{{booktitle}}" floatingLabel></paper-input>
+         <paper-input label="Description" Value="{{bookdesc}}" floatingLabel></paper-input>
+
+         <paper-fab icon="av:play-arrow" on-click="{{createbook}}" id="paper_fab"></paper-fab>
+        </div>
+      </paper-shadow>
+  </template>
+  <script src="createbook-view.js"></script>
+
+</polymer-element>
