@@ -1,9 +1,24 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/polymer-grid-layout/polymer-grid-layout.html">
+  <link rel="import" href="../../bower_components/core-icons/core-icons.html">
+  <link rel="import" href="../../bower_components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="../../bower_components/font-roboto/roboto.html">
+  <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+  <link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+
 <link rel="import" href="../book-element/book-element.html">
+<link rel="import" href="../createbook-view/createbook-view.html">
 <polymer-element name="book-viewer">
 
   <template>
+  <core-toolbar>
+    <paper-icon-button icon="menu"></paper-icon-button>
+    <span flex>test toolbar</span>
+    <paper-fab on-click="{{opencreatebook}}"  icon="{{opencreatebookicon}}"></paper-fab>
+  </core-toolbar>
+
+
+      <div id="content"></div>
       <div id="bookcontainer">
         <book-element></book-element>
         <book-element></book-element>
@@ -16,7 +31,7 @@
 
     <!--<book-element></book-element>
     -->
-
+    <createbook-view class="{{bookcreateviewer}}"></createbook-view>
     <style>
 
       :host{
@@ -28,6 +43,102 @@
         justify-content: space-around;
 
       }
+
+      .hidden {
+        display: none;
+      }
+      .shown {
+        display: flex;
+      }
+
+      body {
+  font-family: RobotoDraft, sans-serif;
+  color: #333;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  background: #EEEEEE;
+}
+
+section {
+  margin: 20px;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+core-toolbar {
+  background-color: #455ede;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 1.5em;
+}
+
+paper-button {
+  margin: 0.5em 1em 0.5em 0;
+  width: 10em;
+}
+
+paper-button[right] {
+  position: fixed;
+  right: 0;
+}
+
+paper-checkbox {
+  margin-left: 1em;
+}
+
+paper-fab {
+  position: absolute !important;
+  top: 35px;
+  right: 1em;
+  z-index: 1;
+}
+
+paper-tabs {
+  background-color: #5677fc;
+  color: #fff;
+}
+
+paper-tabs[noink][nobar] paper-tab.core-selected {
+  color: #ffff8d;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
     </style>
 
   </template>
