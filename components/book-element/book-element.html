@@ -1,0 +1,32 @@
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+
+<polymer-element name="book-element">
+
+  <template>
+    <style>
+      :host {
+
+        box-sizing: border-box;
+      }
+      #paper_button {
+        width: 200px;
+        height: 320px;
+        margin: 0.5cm;
+        background-color: rgb(255, 255, 255);
+        max-width: 300px;
+        max-height: 350px;
+      }
+    </style>
+    <paper-button label="Paper Button" raised z="2" id="paper_button" >
+      <div align="center">
+        <img height="260px" width="186px" border="0px">
+        <div name="title" flex width="186px">Title</div>
+        <font name="description" size="1" width="186px" size="6">2 lines to descripe the cookbook jeay (26 char's)</font>
+      </div>
+    </paper-button>
+
+  </template>
+
+<script src="book-element.js"></script>
+
+</polymer-element>
