@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "description": "",
+  "homepage": "",
+  "keywords": [
+  ],
+  "author": "",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#0.4.2",
+    "paper-elements": "Polymer/paper-elements#master",
+    "polymer-grid-layout": "PolymerLabs/polymer-grid-layout#master"
+  }
+}
