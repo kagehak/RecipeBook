@@ -6,8 +6,8 @@ Polymer({
   createbook: function(){
 
     chrome.syncFileSystem.requestFileSystem(function(fs){
-      fs.root.getFile("boooklist.txt", {create: true}, function(fileEntry){
-
+      fs.root.getFile("boklist.txt", {create: true}, function(fileEntry){
+        console.log("run");
         var data = "" + this.booktitle + "," + this.bookdesc + ";";
 
         fileEntry.createWriter(function(writer){
